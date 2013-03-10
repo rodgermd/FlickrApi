@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+<photosets>
+	<photoset id="72157623940754473" primary="4609025198" secret="196fbbd66d" server="1134" farm="2" photos="17" videos="0" date_create="1273932779" date_update="1299312762">
+		<title>Flickr cup 1</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+	<photoset id="72157608380782457" primary="2972397819" secret="3c239e360c" server="3043" farm="4" photos="14" videos="0" date_create="1225017518" date_update="1297315574">
+		<title>Flickr cup 2</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+	<photoset id="72157604119265383" primary="1859980501" secret="2b49f399e0" server="2163" farm="3" photos="107" videos="0" date_create="1205515687" date_update="1297312788">
+		<title>Flickr cup 3</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+	<photoset id="1424015" primary="66012500" secret="fd9f907f7d" server="30" farm="1" photos="88" videos="0" date_create="1132706057" date_update="1297458284">
+		<title>Flickr cup 4</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+	<photoset id="1424007" primary="66011292" secret="c8dc962026" server="28" farm="1" photos="202" videos="0" date_create="1132706017" date_update="1296338981">
+		<title>Flickr cup 5</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+	<photoset id="1423996" primary="66009344" secret="bd76ddf4bf" server="29" farm="1" photos="17" videos="0" date_create="1132705902" date_update="1296914629">
+		<title>Flickr cup 6</title>
+		<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at orci in nisl commodo malesuada. Ut varius, sem vel tempus elementum, nisl tortor tincidunt diam, et eleifend libero est vel nunc.</description>
+	</photoset>
+</photosets>
+</rsp>
