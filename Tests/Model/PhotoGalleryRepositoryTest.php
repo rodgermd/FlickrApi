@@ -1,8 +1,8 @@
 <?php
 
-namespace Ideato\FlickrApi\Tests\Model;
+namespace Rodgermd\FlickrApi\Tests\Model;
 
-use Ideato\FlickrApi\Model\PhotoGalleryRepository;
+use Rodgermd\FlickrApi\Model\PhotoGalleryRepository;
 
 /**
  * @group flickr
@@ -11,8 +11,8 @@ class PhotoGalleryRepositoryTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->flickr_api = $this->getMock('Ideato\FlickrApi\Wrapper\FlickrApi', array('getPhotoSets', 'getPhotoSet', 'getRecentPhotos', 'getAllContexts'), array(), '', false);
-        $this->photo_repository = $this->getMock('Ideato\FlickrApi\Model\PhotoRepository', array('getPhotosFromXml'));
+        $this->flickr_api = $this->getMock('Rodgermd\FlickrApi\Wrapper\FlickrApi', array('getPhotoSets', 'getPhotoSet', 'getRecentPhotos', 'getAllContexts'), array(), '', false);
+        $this->photo_repository = $this->getMock('Rodgermd\FlickrApi\Model\PhotoRepository', array('getPhotosFromXml'));
 
         $this->photogallery_repository = new PhotoGalleryRepository($this->flickr_api, $this->photo_repository);
     }
@@ -31,7 +31,7 @@ class PhotoGalleryRepositoryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(6, count($photogalleries));
         foreach ($photogalleries as $photogallery)
         {
-            $this->assertTrue($photogallery instanceof \Ideato\FlickrApi\Model\PhotoGallery);
+            $this->assertTrue($photogallery instanceof \Rodgermd\FlickrApi\Model\PhotoGallery);
         }
 
         $this->assertEquals('72157623940754473', $photogalleries[0]->getId());
@@ -56,7 +56,7 @@ class PhotoGalleryRepositoryTest extends \PHPUnit_Framework_TestCase
 
         $photogallery = $this->photogallery_repository->getPhotoGallery('72157623940754473');
 
-        $this->assertTrue($photogallery instanceof \Ideato\FlickrApi\Model\PhotoGallery);
+        $this->assertTrue($photogallery instanceof \Rodgermd\FlickrApi\Model\PhotoGallery);
 
         $this->assertEquals('72157623940754473', $photogallery->getId());
         $this->assertEquals('Flickr cup 1', $photogallery->getTitle());
@@ -69,7 +69,7 @@ class PhotoGalleryRepositoryTest extends \PHPUnit_Framework_TestCase
         $xml_latest_photos = \simplexml_load_file(__DIR__.'/../../DataFixtures/Files/latest_photos.xml');
         $xml_all_contexts = \simplexml_load_file(__DIR__.'/../../DataFixtures/Files/all_contexts.xml');
 
-        $photo1 = $this->getMock('Ideato\FlickrApi\Model\Photo', array('setPhotoSetId', 'getId'));
+        $photo1 = $this->getMock('Rodgermd\FlickrApi\Model\Photo', array('setPhotoSetId', 'getId'));
         $photo1->expects($this->once())
                ->method('setPhotoSetId')
                ->with('72157623940754473');
@@ -77,7 +77,7 @@ class PhotoGalleryRepositoryTest extends \PHPUnit_Framework_TestCase
                ->method('getId')
                ->will($this->returnValue('1234'));
 
-        $photo2 = $this->getMock('Ideato\FlickrApi\Model\Photo', array('setPhotoSetId', 'getId'));
+        $photo2 = $this->getMock('Rodgermd\FlickrApi\Model\Photo', array('setPhotoSetId', 'getId'));
         $photo2->expects($this->once())
                ->method('setPhotoSetId')
                ->with('72157623940754473');

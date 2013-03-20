@@ -1,8 +1,8 @@
 <?php
 
-namespace Ideato\FlickrApi\Test;
+namespace Rodgermd\FlickrApi\Test;
 
-use Ideato\FlickrApi\Wrapper\Curl;
+use Rodgermd\FlickrApi\Wrapper\Curl;
 
 class CurlMock extends Curl
 {

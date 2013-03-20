@@ -1,18 +1,18 @@
 <?php
 
-namespace Ideato\FlickrApi\Model;
+namespace Rodgermd\FlickrApi\Model;
 
-use Ideato\FlickrApi\Model\Photo;
+use Rodgermd\FlickrApi\Model\Photo;
 
 class PhotoRepository
 {
     /**
-     * Builds an array of Ideato\FlickrApi\Model\Photo object based on the SimpleXMLElement given
+     * Builds an array of Rodgermd\FlickrApi\Model\Photo object based on the SimpleXMLElement given
      *
      * @param \SimpleXMLElement $xml
      * @param string $preview_size
      * @param string $image_size
-     * @return array of Ideato\FlickrApi\Model\Photo object
+     * @return array of Rodgermd\FlickrApi\Model\Photo object
      */
     public function getPhotosFromXml(\SimpleXMLElement $xml, $preview_size = 's', $image_size = 'm')
     {

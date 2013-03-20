@@ -1,6 +1,6 @@
 <?php
 
-namespace Ideato\FlickrApi\Model;
+namespace Rodgermd\FlickrApi\Model;
 
 class PhotoGallery
 {

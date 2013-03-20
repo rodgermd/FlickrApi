@@ -1,16 +1,16 @@
 <?php
 
-namespace Ideato\FlickrApi\Model;
+namespace Rodgermd\FlickrApi\Model;
 
-use Ideato\FlickrApi\Model\PhotoGallery;
+use Rodgermd\FlickrApi\Model\PhotoGallery;
 
 class PhotoGalleryRepository
 {
     protected $flickr_api;
     protected $photo_repository;
 
-    public function __construct(\Ideato\FlickrApi\Wrapper\FlickrApi $flickr_api,
-                                \Ideato\FlickrApi\Model\PhotoRepository $photo_respository)
+    public function __construct(\Rodgermd\FlickrApi\Wrapper\FlickrApi $flickr_api,
+                                \Rodgermd\FlickrApi\Model\PhotoRepository $photo_respository)
     {
         $this->flickr_api = $flickr_api;
         $this->photo_repository = $photo_respository;

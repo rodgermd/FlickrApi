@@ -1,9 +1,9 @@
 <?php
 
-namespace Ideato\FlickrApi\Tests\Wrapper;
+namespace Rodgermd\FlickrApi\Tests\Wrapper;
 
-use Ideato\FlickrApi\Test\CurlMock;
-use Ideato\FlickrApi\Wrapper\FlickrApi;
+use Rodgermd\FlickrApi\Test\CurlMock;
+use Rodgermd\FlickrApi\Wrapper\FlickrApi;
 
 /**
  * @group flickr
@@ -56,13 +56,13 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
      */
     public function test_wrong_construct_parameters()
     {
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl');
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl');
         $wrapper = new FlickrApi($curl, '', '', '');
     }
 
     public function test_no_photo_sets()
     {
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->returnValue('<?xml version="1.0" encoding="utf-8" ?><rsp stat="ok"><photosets></photosets></rsp>'));
@@ -73,7 +73,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
 
     public function test_empty_response()
     {
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->returnValue(''));
@@ -86,7 +86,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
 
     public function test_error_response()
     {
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->returnValue('<?xml version="1.0" encoding="utf-8" ?><rsp stat="fail"><err code="1" msg="Photoset not found" /></rsp>'));
@@ -95,7 +95,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(array(), $wrapper->getPhotoSets());
 
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->returnValue('<?xml version="1.0" encoding="utf-8" ?><rsp stat="fail"><err code="1" msg="Photoset not found" /></rsp>'));
@@ -105,7 +105,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(null, $wrapper->getPhotoSet('12345'));
 
         
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->onConsecutiveCalls('<?xml version="1.0" encoding="utf-8" ?><rsp stat="ok"></rsp>',
@@ -118,7 +118,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
 
     public function test_curl_error()
     {
-        $curl = $this->getMock('\Ideato\FlickrApi\Wrapper\Curl', array('get', 'hasError'));
+        $curl = $this->getMock('\Rodgermd\FlickrApi\Wrapper\Curl', array('get', 'hasError'));
         $curl->expects($this->any())
              ->method('get')
              ->will($this->returnValue('<?xml version="1.0" encoding="utf-8" ?><rsp stat="ok"></rsp>'));

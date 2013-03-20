@@ -1,8 +1,8 @@
 <?php
 
-namespace Ideato\FlickrApi\Tests\Model;
+namespace Rodgermd\FlickrApi\Tests\Model;
 
-use Ideato\FlickrApi\Model\PhotoRepository;
+use Rodgermd\FlickrApi\Model\PhotoRepository;
 
 /**
  * @group flickr
@@ -18,7 +18,7 @@ class PhotoRepositoryTest extends \PHPUnit_Framework_TestCase
 
         foreach ($photos as $photo)
         {
-            $this->assertTrue($photo instanceof \Ideato\FlickrApi\Model\Photo);
+            $this->assertTrue($photo instanceof \Rodgermd\FlickrApi\Model\Photo);
         }
 
         $this->assertEquals('http://www.flickr.com/wpf/4609025198', (string)$photos[0]->getUrl());
