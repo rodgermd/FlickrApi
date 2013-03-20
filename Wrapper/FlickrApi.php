@@ -216,4 +216,19 @@ class FlickrApi
     }
   }
 
+  public function search($keyword)
+  {
+    $results = $this->curl->get($this->search_url($keyword));
+    $xml     = \simplexml_load_string($results);
+
+    return $xml;
+  }
+
+  protected function search_url($keywords)
+  {
+    return $this->buildBaseUrl('flickr.photos.search', array(
+      'tags'           => $keywords,
+      'format'         => 'rest'));
+  }
+
 }

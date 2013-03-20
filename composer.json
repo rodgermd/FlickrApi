@@ -22,5 +22,5 @@
     "autoload": {
         "psr-0": { "Rodgermd\\FlickrApi": "" }
     },
-    "target-dir": "rodgermd/FlickrApi"
+    "target-dir": "Rodgermd/FlickrApi"
 }
