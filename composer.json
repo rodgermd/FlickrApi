@@ -1,8 +1,7 @@
 {
-    "name": "ideato/flickr-api",
+    "name": "rodgermd/flickr-api",
     "description": "Flickr Api",
     "keywords": ["flickr api photo"],
-    "homepage": "http://www.ideato.it/",
     "license": "MIT",
     "authors": [
         {
@@ -21,7 +20,7 @@
     "suggest": {
     },
     "autoload": {
-        "psr-0": { "Ideato\\FlickrApi": "" }
+        "psr-0": { "Rodgermd\\FlickrApi": "" }
     },
-    "target-dir": "Ideato/FlickrApi"
+    "target-dir": "rodgermd/FlickrApi"
 }
