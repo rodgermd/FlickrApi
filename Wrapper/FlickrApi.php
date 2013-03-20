@@ -1,6 +1,6 @@
 <?php
 
-namespace Ideato\FlickrApi\Wrapper;
+namespace Rodgermd\FlickrApi\Wrapper;
 
 class FlickrApi
 {
