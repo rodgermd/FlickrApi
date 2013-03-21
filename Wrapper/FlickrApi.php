@@ -111,7 +111,7 @@ class FlickrApi
    */
   public function __construct(Curl $curl, $url, $user_id, $api_key)
   {
-    if (empty($url) || empty($user_id) || empty($api_key)) {
+    if (empty($url) || empty($api_key)) {
       throw new \InvalidArgumentException('Url, user_id and api_key are mandatory for using flickr api');
     }
 
@@ -226,9 +226,7 @@ class FlickrApi
 
   protected function search_url($keywords)
   {
-    return $this->buildBaseUrl('flickr.photos.search', array(
-      'tags'           => $keywords,
-      'format'         => 'rest'));
+    return $this->buildBaseUrl('flickr.photos.search', "&tags=$keywords&format=rest");
   }
 
 }
